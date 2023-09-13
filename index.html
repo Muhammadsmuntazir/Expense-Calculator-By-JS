@@ -1,0 +1,197 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Expense Calculator Using Javascript</h1>
+    <div class="container">
+        <h3>AVAILABLE BALANCE</h3>
+        <h1 id="balance">0.00 PKR</h1>
+
+
+        <div class="row1">
+            <div class="inc-exp">
+                <div class="income">
+                    <h4>INCOME</h4>
+                    <p id="income">+0.00 PKR</p>
+                </div>
+                <div class="expense">
+                    <h4>EXPENSE</h4>
+                    <p id="expense">-0.00 PKR</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row2">    
+            <div class="profit-loss">
+                <div class="profit">
+                    <h4>PROFIT</h4>
+                    <p id="profit">+0.00 PKR</p>
+                </div>
+                <div class="loss">
+                    <h4>LOSS</h4>
+                    <p id="loss">-0.00 PKR</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="income-form">
+            <input type="number" id="income-button" placeholder="Enter Income"><br>
+            <button id="income-btn" onClick="addEvent()" >ADD</button>
+        </div>
+        <div class="expense-form">
+            <input type="number" id="expense-button" placeholder="Enter Expense"><br>
+            <button id="expense-btn">DEDUCT</button>
+        </div>
+    </div>    
+    <script>
+        
+        let balance = document.getElementById('balance').innerText=0
+        let income = document.getElementById('income')
+        let expense = document.getElementById('expense')
+        let profit = document.getElementById('profit')
+        let loss = document.getElementById('loss')
+        let income_button = document.getElementById("income-button").value = ''
+        let exp_btn = document.getElementById("expense-button").value
+        
+        function addEvent(){
+            let UpdateBalance = balance + income_button
+            console.log(UpdateBalance)
+        }
+
+        function deductEvent(){
+
+        }
+
+    </script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Expense Calculator</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Expense Calculator</h1>
+    <p class="balance">Available Balance: <span id="availableBalance">0</span></p>
+    <p class="profit">Profit & Income: <span id="profitIncome">0</span></p>
+    <p class="expense">Loss & Expense: <span id="lossExpense">0</span></p>
+    <button id="income-btn">Add</button>
+    <button id="expense-btn">Deduct</button><br>
+    <input type="number" id="amount" placeholder="Enter Amount">
+    </div>
+    <script>
+        // Get references to HTML elements
+        const profitIncomeElement = document.getElementById("profitIncome");
+        const lossExpenseElement = document.getElementById("lossExpense");
+        const availableBalanceElement = document.getElementById("availableBalance");
+        const amountInput = document.getElementById("amount");
+        const addButton = document.getElementById("addButton");
+        const deductButton = document.getElementById("deductButton");
+
+        // Initialize variables for profit/income, loss/expense, and available balance
+        let profitIncome = 0;
+        let lossExpense = 0;
+
+        // Function to update the displayed values
+        function updateDisplay() {
+            profitIncomeElement.textContent = profitIncome;
+            lossExpenseElement.textContent = lossExpense;
+            const availableBalance = profitIncome - lossExpense;
+            availableBalanceElement.textContent = availableBalance;
+        }
+
+        // Add button click event handler
+        addButton.addEventListener("click", function () {
+            const amount = parseFloat(amountInput.value);
+            if (!isNaN(amount)) {
+                profitIncome += amount;
+                updateDisplay();
+                amountInput.value = "";
+            }
+        });
+
+        // Deduct button click event handler
+        deductButton.addEventListener("click", function () {
+            const amount = parseFloat(amountInput.value);
+            if (!isNaN(amount)) {
+                lossExpense += amount;
+                updateDisplay();
+                amountInput.value = "";
+            }
+        });
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Expense Calculator</h1>
+    <p class="balance">Available Balance: <span id="availableBalance">0</span></p>
+    <p class="profit" >Profit & Income: <span id="profitIncome">0</span></p>
+    <p class="expense">Loss & Expense: <span id="lossExpense">0</span></p>
+    <input type="number" id="amount"><br>
+    <button id="addButton" class="income-btn">Add</button>
+    <button id="deductButton" class="expense-btn">Deduct</button>
+    </div>
+    <script>
+        // Get references to HTML elements
+        const profitIncomeElement = document.getElementById("profitIncome");
+        const lossExpenseElement = document.getElementById("lossExpense");
+        const availableBalanceElement = document.getElementById("availableBalance");
+        const amountInput = document.getElementById("amount");
+        const addButton = document.getElementById("addButton");
+        const deductButton = document.getElementById("deductButton");
+
+        // Initialize variables for profit/income, loss/expense, and available balance
+        let profitIncome = 0;
+        let lossExpense = 0;
+
+        // Function to update the displayed values
+        function updateDisplay() {
+            profitIncomeElement.textContent = profitIncome;
+            lossExpenseElement.textContent = lossExpense;
+            const availableBalance = profitIncome - lossExpense;
+            availableBalanceElement.textContent = availableBalance;
+        }
+
+        // Add button click event handler
+        addButton.addEventListener("click", function () {
+            const amount = parseFloat(amountInput.value);
+            if (!isNaN(amount)) {
+                profitIncome += amount;
+                updateDisplay();
+                amountInput.value = "";
+            }
+        });
+
+        // Deduct button click event handler
+        deductButton.addEventListener("click", function () {
+            const amount = parseFloat(amountInput.value);
+            if (!isNaN(amount)) {
+                lossExpense += amount;
+                updateDisplay();
+                amountInput.value = "";
+            }
+        });
+    </script>
+</body>
+</html>

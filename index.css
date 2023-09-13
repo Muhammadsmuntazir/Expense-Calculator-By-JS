@@ -1,0 +1,116 @@
+.container{
+    width: 300px;
+    margin: auto;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: #16a085 5px 5px 20px;
+    /* border: 2px solid black; */
+    text-align: center;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #a5ffed;
+}
+
+
+.balance{
+    margin: auto;
+    height: 50px;
+    line-height: 50px;
+    width: 80%;
+    background-color: #001b44;
+    color: white;
+    padding: 0px 20px;
+    border-radius: 5px 5px 5px 5px;
+    
+}
+.expense{
+    margin: auto;
+    height: 50px;
+    line-height: 50px;
+    width: 80%;
+    background-color: #ff1e00;
+    color: white;
+    padding: 0px 20px;
+    border-radius: 5px 5px 5px 5px;
+}
+.profit{
+    
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 10px;
+    height: 50px;
+    line-height: 50px;
+    width: 80%;
+    background-color: #05aaf7;
+    color: white;
+    padding: 0px 20px;
+    border-radius: 5px 5px 5px 5px;
+}
+.loss{
+    margin: 5px;
+    padding: 0px 20px;
+    width: 100px;
+    background-color: #27ae60;
+    border-radius: 10px 10px 10px 10px;
+    
+}
+
+.income-btn{
+        background-color: #3498db;
+        /* margin: 10px 0px; */
+        color: #000c14;
+        border: 1px solid #3498db;
+        padding: 5px 20%;
+        border-radius: 5px 5px 5px 5px;
+        
+    }
+.income-btn:hover{
+    background-color: #000c14;
+    /* margin: 10px 0px; */
+    color: white;
+    border: 1px solid #3498db;
+    padding: 5px 20%;
+    border-radius: 5px 5px 5px 5px;
+    
+    }
+.expense-btn{
+        color: #000c14;
+        background-color: #3498db;
+        border: 1px solid #3498db;
+        margin: 5px 0px;
+        padding: 5px 15%;
+        border-radius: 5px 5px 5px 5px;
+        
+}
+.expense-btn:hover{
+    color: white;
+    background-color: #000c14;
+    border: 1px solid #3498db;
+    margin: 5px 0px;
+    padding: 5px 15%;
+    border-radius: 5px 5px 5px 5px;
+    
+}
+#income-button{
+    padding: 3px 10px;
+    width: 30%;
+    border: 1px solid white;
+    border-radius: 5px 5px 5px 5px;
+    
+}
+
+#expense-button{
+    padding: 10px 10px;
+    width: 30%270px;
+    border: 1px solid white;
+    border-radius: 5px 5px 5px 5px;
+
+}
+
+#amount{
+    padding: 3px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 86%;
+    border: 1px solid white;
+    border-radius: 5px 5px 5px 5px;
+}
